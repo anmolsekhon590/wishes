@@ -5,18 +5,22 @@
     <title>Add Wish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css" >
-    <script src="js/bootstrap.js"></script>
 </head>
 <body>
-    <h1>Add Wish</h1>
-    <nav>
-        <a href="/">Home</a>
+    <h1 class="text-center">Add Wish</h1>
+    <nav class="navbar navbar-light bg-light">
+        <a class="nav-item" href="/">Home</a>
     </nav>
 
-    <form method="post" action="#" th:action="@{/insert}" th:object="${wish}">
-        Wish: <input type="text" name="wish" th:field="*{wish}" />
-        <input type="submit" value="Add">
-    </form>
+    <div class="container">
+        <form method="post" action="#" th:action="@{/insert}" th:object="${wish}">
+            <div class="form-group">
+                <label for="wish" >Wish</label>
+                <input id="wish" class="form-control" type="text" name="wish" placeholder="Enter your wish here" th:field="*{wish}" />
+            </div>
+            <input class="btn btn-primary mt-2" type="submit" value="Add">
+        </form>
+    </div>
 
 </body>
 </html>
