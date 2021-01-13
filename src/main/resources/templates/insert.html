@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Wish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css" >
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+    <h1>Add Wish</h1>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+
+    <form method="post" action="#" th:action="@{/insert}" th:object="${wish}">
+        Wish: <input type="text" name="wish" th:field="*{wish}" />
+        <input type="submit" value="Add">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css" >
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+    <h1 class="text-center">Wishes</h1>
+
+    <nav>
+        <a href="/insert">Add Wish</a>
+    </nav>
+    <div class="container">
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Wish</th>
+            </tr>
+            <tr th:each="wish:${wishList}">
+                <td th:text="${wish.id}"></td>
+                <td th:text="${wish.wish}"></td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>
