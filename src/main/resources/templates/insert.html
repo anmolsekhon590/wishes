@@ -7,20 +7,25 @@
     <link rel="stylesheet" href="css/bootstrap.css" >
 </head>
 <body>
-    <h1 class="text-center">Add Wish</h1>
+    <header>
+        <h1 class="text-center">Add Wish</h1>
+    </header>
+
     <nav class="navbar navbar-light bg-light">
         <a class="nav-item" href="/">Home</a>
     </nav>
 
-    <div class="container">
-        <form method="post" action="#" th:action="@{/insert}" th:object="${wish}">
-            <div class="form-group">
-                <label for="wish" >Wish</label>
-                <input id="wish" class="form-control" type="text" name="wish" placeholder="Enter your wish here" th:field="*{wish}" />
-            </div>
-            <input class="btn btn-primary mt-2" type="submit" value="Add">
-        </form>
-    </div>
+    <main>
+        <div class="container">
+            <form method="post" action="#" th:action="@{/insert}" th:object="${wish}">
+                <div class="form-group">
+                    <label for="wish" >Wish</label>
+                    <input id="wish" class="form-control" type="text" name="wish" placeholder="Enter your wish here" th:field="*{wish}" />
+                </div>
+                <input class="btn btn-primary mt-2" type="submit" value="Add">
+            </form>
+        </div>
+    </main>
 
 </body>
 </html>
