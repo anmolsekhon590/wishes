@@ -22,7 +22,7 @@ Clone the repository and open using an IDE (IntelliJ recommended).
 
 Make sure all the dependencies are installed and run the server.
 
-Navigate to localhost (127.0.0.1) using a web browser on the same device you are using to run the server.
+Navigate to localhost (127.0.0.1:8080) using a web browser on the same device you are using to run the server.
 
 ```sh
 localhost:8080/
